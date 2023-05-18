@@ -38,6 +38,12 @@ The chosen nutrients for prediction are:
 
 After preprocessing the data, a correlation matrix is generated, and a linear regression model is trained on the data after scaling it using the MinMaxScaler. The model's performance is evaluated using metrics like R-squared and mean squared error (MSE), both on the test set and with 5-fold cross-validation.
 
+**Linear regression
+Our prediction model is a linear regression model that takes the value of X (protein) to predict Y (each one of the six important nutrients we identified previously). Thus, we trained 6 regression models. We are predicting a continuous variable, therefore it is a regression model. We are investigating how the level of X relates to the level of Y with disregard to any joint effect of X with some other variables, therefore it is a single regression model. We intend to provide a simple, useful prediction method, therefore it is a single linear regression model. We included the linear regression model plot (shown in Appendix 3.) to outline the difference of including and excluding the outliers. We observed a significant improvement in the linearity of the plot after removing the outliers which indicates that the outliers had a significant impact on the model accuracies on predicting relationships.
+
+**Testing the model
+The final step is predicting each nutrient based on the protein level using 20% of data (the testing proportion), getting the result of average mean squared error (MSE) and the goodness of fit (R²) of each nutrient, and compare it to the 5-fold cross validation MSE and R² to find out if our prediction is overestimating or underestimating. We also included the residual plot of the regression model between the protein and the nutrients (shown in the Appendix 2.). From the residual plot, we can see that the residuals are distributed randomly along the zero value line which indicates that the result is unbiased and the model is able to predict the relationship quite accurately.
+
 # File structure and use of each file
 1. The first file, `main.ipynb`, is the main file, containing all the code and comments. This file requires the pandas, numpy, seaborn, matplotlib, scikit-learn, scipy, and openpyxl libraries to run, as well as Jupyter Notebook.
 2. The second file is the data file, an .xlsx file, containing all the nutrients we need to analyze.
