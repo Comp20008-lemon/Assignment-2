@@ -41,7 +41,7 @@ The chosen nutrients for prediction are:
 ### Linear Regression
 We then train a linear regression model on the preprocessed and scaled data. The model is trained to predict the selected nutrients based on the other features in the dataset. The coefficients determined by the model represent the expected change in the dependent variable (the nutrients) for a one-unit change in the respective independent variable, assuming all other variables are held constant.
 
-## Performance Evaluation
+### Performance Evaluation
 The performance of the model is evaluated using metrics like R-squared and mean squared error (MSE), both on the test set and with 5-fold cross-validation.
 
 
@@ -50,6 +50,6 @@ The performance of the model is evaluated using metrics like R-squared and mean 
 2. The second file is the data file, an .xlsx file, containing all the nutrients we need to analyze.
 
 # Instructions on how to run your code.
-# open a jupyter notebook, and run the code in the main.ipynb file, this will generate the results and the findings we have.
+open a jupyter notebook, and run the code in the main.ipynb file, this will generate the results and the findings we have.
 # Any additional requirements needed to run code.
 # We worked hard :b
