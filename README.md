@@ -1,6 +1,6 @@
 # Canvas Group 80
-# Group leader:  weishanl, weishan Liao
-# Members: username, name
+# Group leader:  1150246, Weishan Liao
+# Members: (1078175, Xu koi Kok), (1358783, Feiyang Gu), (1098650, Fatima)
 # Introduction of intended use for code and csv data files
 The provided Python script is designed to analyze the nutritional data of protein-related food items. The accompanying .xlsx data file presents the data as follows:
 
@@ -36,19 +36,20 @@ The chosen nutrients for prediction are:
 - 'Magnesium (Mg) \n(mg)'
 - 'Riboflavin (B2) \n(mg)'
 
-After preprocessing the data, a correlation matrix is generated, and a linear regression model is trained on the data after scaling it using the MinMaxScaler. The model's performance is evaluated using metrics like R-squared and mean squared error (MSE), both on the test set and with 5-fold cross-validation.
 
-Linear regression
-- Our prediction model is a linear regression model that takes the value of X (protein) to predict Y (each one of the six important nutrients we identified previously). Thus, we trained 6 regression models. We are predicting a continuous variable, therefore it is a regression model. We are investigating how the level of X relates to the level of Y with disregard to any joint effect of X with some other variables, therefore it is a single regression model. We intend to provide a simple, useful prediction method, therefore it is a single linear regression model. We included the linear regression model plot (shown in Appendix 3.) to outline the difference of including and excluding the outliers. We observed a significant improvement in the linearity of the plot after removing the outliers which indicates that the outliers had a significant impact on the model accuracies on predicting relationships.
 
-Testing the model
-- The final step is predicting each nutrient based on the protein level using 20% of data (the testing proportion), getting the result of average mean squared error (MSE) and the goodness of fit (R²) of each nutrient, and compare it to the 5-fold cross validation MSE and R² to find out if our prediction is overestimating or underestimating. We also included the residual plot of the regression model between the protein and the nutrients (shown in the Appendix 2.). From the residual plot, we can see that the residuals are distributed randomly along the zero value line which indicates that the result is unbiased and the model is able to predict the relationship quite accurately.
+### Linear Regression
+We then train a linear regression model on the preprocessed and scaled data. The model is trained to predict the selected nutrients based on the other features in the dataset. The coefficients determined by the model represent the expected change in the dependent variable (the nutrients) for a one-unit change in the respective independent variable, assuming all other variables are held constant.
+
+## Performance Evaluation
+The performance of the model is evaluated using metrics like R-squared and mean squared error (MSE), both on the test set and with 5-fold cross-validation.
+
 
 # File structure and use of each file
 1. The first file, `main.ipynb`, is the main file, containing all the code and comments. This file requires the pandas, numpy, seaborn, matplotlib, scikit-learn, scipy, and openpyxl libraries to run, as well as Jupyter Notebook.
 2. The second file is the data file, an .xlsx file, containing all the nutrients we need to analyze.
 
 # Instructions on how to run your code.
-# open a jupyter notebook, and run the code in the main.ipynb file, it will generate the results and the findings we have.
+# open a jupyter notebook, and run the code in the main.ipynb file, this will generate the results and the findings we have.
 # Any additional requirements needed to run code.
 # We worked hard :b
