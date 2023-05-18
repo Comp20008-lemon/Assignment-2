@@ -23,12 +23,11 @@ In the first part, we analyzed all nutrients by it's "score", the score is inten
   - Less than 20% gives 3.20 scores.
   - Less than 30% gives 2.40 scores.
   - Less than 40% gives 1.60 scores.
-# Please note that this scoring is solely based on the data structure, so it might not always accurately reflect the data's quality.
+- Please note that this scoring is solely based on the data structure, so it might not always accurately reflect the data's quality.
 
 
-# After this part, we picked only those nutrients with score higher than 9, and we got 20 nutrients.
-# After the scoring part, we read researches and selected 6 out of the 20 nutrients
-# # Setting the names of the nutirnts we intend to predict
+- After this part, we picked only those nutrients with score higher than 9, and we got 20 nutrients.
+- After the scoring part, we read researches and selected 6 out of the 20 nutrients
 The chosen nutrients for prediction are:
 - 'Zinc (Zn) \n(mg)'
 - 'Pyridoxine (B6) \n(mg)'
